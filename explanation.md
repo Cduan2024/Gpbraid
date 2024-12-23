@@ -18,4 +18,4 @@ Length of good position braid representatives
         return BaseMat(EigenspaceProjector(W,word,k));
         end;
 
-   The output of this function a basis of the above complex eigenspace. 
+   The output of this function a basis of the above complex eigenspace. Specifically, it will be a list of vectors which are the coordinate vectors of the basis with respect to simple roots. For example, if the output of (W,w,1/2) is [[1,0,0,0],[0,1,0,0]], then the 
