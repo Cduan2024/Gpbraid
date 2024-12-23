@@ -7,15 +7,38 @@ Length of good position braid representatives
         GetEigenVal:=function(W,w)   
         return ReflectionEigenvalues(W)[Position(ChevieClassInfo(W).classtext,w)];
         end;
-
+   
    The output of this function is a list of eigenvalues of the w-action on the complex reflection representation of W. Specifically, it will be a list of intergers in [0,1). In particular, it will be increasing while all zeroes will be at the end of the list. For example, if the output of (W,w) is [1/2,1/2,0]. then the eigenvalues of w are e^{\pi i} and e^{\2pi i}. Furthermore, the dimension of the corresponding complex eigenspace is exactly the times it occurs in the output (i.e. the dimension of the complex eigenspace corresponding to e^{\pi i} is 2).
 
-2. Next we define a function to get a basis of the complex eigenspace corresponding to eigenvalue e^{2k\pi i}.
+3. Next we define a function to get a basis of the complex eigenspace corresponding to eigenvalue e^{2k\pi i}.
 
         BaseEigen:=function(W,w,k)
         local word;
         word:=EltWord(W,w);
         return BaseMat(EigenspaceProjector(W,word,k));
         end;
+   
+   The output of this function a basis of the above complex eigenspace. Specifically, it will be a list of vectors which are the coordinate vectors of the basis with respect to simple roots. For example, if the output of (W,w,1/2) is [[1,0,0,0],[0,1,0,0]], then {\alpha_1, \alpha_2} is a basis of this complex eigenspace.
 
-   The output of this function a basis of the above complex eigenspace. Specifically, it will be a list of vectors which are the coordinate vectors of the basis with respect to simple roots. For example, if the output of (W,w,1/2) is [[1,0,0,0],[0,1,0,0]], then the 
+4. Next we define a function to check orthogonality, it has two parts.
+
+       CheckOrthoVec:=function(W,a,b)
+       local M;
+       M:=TransposedMat(CartanMat(W));
+       return a*M*b;
+       end;
+   
+   The first part gives the usual inner product between a and b
+
+       CheckOrthoSpace:=function(W,w,k,b)
+       local base,ortho,product,vec;
+       base:=BaseEigen(W,w,k);
+       ortho:=1;
+       for vec in base do
+           if CheckOrthoVec(W,vec,b)<>0 then
+               ortho:=0;
+           fi;
+       od;
+       return ortho;
+       end;
+   
