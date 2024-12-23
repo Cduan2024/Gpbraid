@@ -28,7 +28,7 @@ Length of good position braid representatives
        return a*M*b;
        end;
    
-   The first part gives the usual inner product between a and b
+   The first part gives the usual inner product between a and b, they are orthogonal to each other if the output is equal to 0.
 
        CheckOrthoSpace:=function(W,w,k,b)
        local base,ortho,product,vec;
