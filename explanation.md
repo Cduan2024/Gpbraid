@@ -1,4 +1,4 @@
-This is the explanation of the exceptional type part of section 3.4 in the paper.
+This is the explanation of the exceptional type part of section 3.4 in the paper. All codes are in GAP-CHEVIE(https://github.com/jmichel7/gap3-jm). 
 
 Length of good position braid representatives
 ------
