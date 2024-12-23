@@ -8,4 +8,4 @@ Length of good position braid representatives
         return ReflectionEigenvalues(W)[Position(ChevieClassInfo(W).classtext,w)];
         end;
 
-   The output of this function is a list of eigenvalues of the w-action on the complex reflection representation of W. Specifically, it will be a list of intergers in [0,1). In particular, it will be increasing while all zeroes will be at the end of the list. For example, if the output of (W,w) is [
+   The output of this function is a list of eigenvalues of the w-action on the complex reflection representation of W. Specifically, it will be a list of intergers in [0,1). In particular, it will be increasing while all zeroes will be at the end of the list. For example, if the output of (W,w) is [1/2,1/2,0]. then the eigenvalues of w are `e^{\pi i}`
