@@ -87,4 +87,4 @@ Output the list.
       
       lengthlist;
 
-    
+The order of the list is exactly the order of the conjugacy classes in ChevieClassInfo(W). Specifically, the first entry in the list is the length of the good position braid representatives of the first conjugacy class in ChevieClassInfo(W).
