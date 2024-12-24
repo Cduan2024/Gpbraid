@@ -46,3 +46,16 @@ Length of good position braid representatives
 
 4. Next we define a function to find the minimal k for any root \alpha such that \alpha is not orthogonal to the complex eigenspace corresponding to e^{2k\pi i}. Recall our definition of "real eigenspace" in the paper, this k is also the minimal k such that \alpha is not orthogonal to the real eigenspace corresponding to e^{2k\pi i} since its complexification is the sum of the complex eigenspace cooresponding to e^{2k\pi i} and e^{2(1-k)\pi i} and k<1-k due to minimality.
 
+       RootVal:=function(W,w,b)
+       local val,eigenval;
+       val:=-1;
+       for eigenval in GetEigenVal(W,w) do
+           if CheckOrthoSpace(W,w,eigenval,b)=0 and val=-1 then
+               val:=eigenval;
+           fi;
+       od;
+       return val;
+       end;
+
+5. Finally we define the function to compute the length of good position braid representatives of a given conjugacy class of W.
+
