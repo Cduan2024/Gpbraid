@@ -74,3 +74,11 @@ Length of good position braid representatives
     Here if the RootVal is 0 then we actually have to add 1 since 0 corresponds to e^{2\pi}. 
 
 6.(Extra) You can get the list of lengths for all different conjugacy class as follows.
+
+      lengthlist:=[];
+      for class in ChevieClassInfo(W).classtext do
+          Add(lengthlist, GoodLength(W,class));
+      od;
+      print(lengthlist);
+
+    
