@@ -77,14 +77,14 @@ Length of good position braid representatives
 
       lengthlist:=[];
 
-Add lengths to the list.
+  Add lengths to the list.
       
       for class in ChevieClassInfo(W).classtext do
           Add(lengthlist, GoodLength(W,class));
       od;
 
-Output the list.
+  Output the list.
       
       lengthlist;
 
-The order of the list is exactly the order of the conjugacy classes in ChevieClassInfo(W). Specifically, the first entry in the list is the length of the good position braid representatives of the first conjugacy class in ChevieClassInfo(W).
+  The order of the list is exactly the order of the conjugacy classes in ChevieClassInfo(W). Specifically, the first entry in the list is the length of the good position braid representatives of the first conjugacy class in ChevieClassInfo(W).
