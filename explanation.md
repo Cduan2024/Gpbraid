@@ -1,5 +1,6 @@
 This is the explanation of the exceptional type part of section 3.4 in the paper. All codes are in GAP-CHEVIE (https://github.com/jmichel7/gap3-jm). 
 
+
 Length of good position braid representatives
 ------
 1. We first define a function to get the eigenvalues of a Weyl group element w on its complex reflection representation. 
@@ -88,3 +89,7 @@ Length of good position braid representatives
       lengthlist;
 
   The order of the list is exactly the order of the conjugacy classes in ChevieClassInfo(W). Specifically, the first entry in the list is the length of the good position braid representatives of the first conjugacy class in ChevieClassInfo(W).
+
+
+Find the most elliptic conjugacy class in the preimage of a unipotent orbit under Lusztig's map
+------
