@@ -24,7 +24,7 @@ Length of good position braid representatives
 
        CheckOrthoVec:=function(W,a,b)
        local M;
-       M:=TransposedMat(CartanMat(W));
+       M:=CartanMat(W);
        return a*M*b;
        end;
    
