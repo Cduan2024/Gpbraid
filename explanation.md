@@ -93,6 +93,8 @@ Length of good position braid representatives
 
 Find the most elliptic conjugacy class in the preimage of a unipotent orbit under Lusztig's map
 ------
+After getting the preimage using Lusztig's map, one can just apply the first step above to all the conjugacy classes in the preimage and find the conjugacy class with minimal number of 0.    
+
 
 Lusztig's map
 ------
