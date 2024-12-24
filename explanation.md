@@ -59,3 +59,16 @@ Length of good position braid representatives
 
 5. Finally we define the function to compute the length of good position braid representatives of a given conjugacy class of W.
 
+       GoodLength:=function(W,w)
+       local root,length;
+       length:=0;
+       for root in W.roots do
+           if RootVal(W,w,root)<>0 then
+               length:=length+RootVal(W,w,root);
+           else length:=length+1;
+           fi;
+       od;
+       return length;
+       end;
+   
+
