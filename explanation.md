@@ -33,12 +33,13 @@ Length of good position braid representatives
        CheckOrthoSpace:=function(W,w,k,b)
        local base,ortho,product,vec;
        base:=BaseEigen(W,w,k);
-       ortho:=1;
+       ortho:=0;
        for vec in base do
            if CheckOrthoVec(W,vec,b)<>0 then
-               ortho:=0;
+               ortho:=1;
            fi;
        od;
        return ortho;
        end;
-   
+
+   The second part determines if a vector is orthogonal to the complex eigenspace of w corresponding to eigenvalue e^{2k\pi i}. If the output is 0 then it is orthogonal to the eigenspace, otherwise it is not.
