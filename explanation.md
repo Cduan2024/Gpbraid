@@ -44,4 +44,5 @@ Length of good position braid representatives
 
    The second part determines if a vector is orthogonal to the complex eigenspace of w corresponding to eigenvalue e^{2k\pi i}. If the output is 0 then it is orthogonal to the eigenspace, otherwise it is not.
 
+5. Next we define a function to find the minimal k for any root \alpha such that \alpha is not orthogonal to the complex eigenspace corresponding to e^{2k\pi i}. Recall our definition of "real eigenspace" in the paper, this k is also the minimal k such that \alpha is not orthogonal to the real eigenspace corresponding to e^{2k\pi i} since its complexification is the sum of the complex eigenspace cooresponding to e^{2k\pi i} and e^{2(1-k)\pi i} and k<1-k due to minimality.
 
