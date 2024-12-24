@@ -50,7 +50,7 @@ Length of good position braid representatives
        local val,eigenval;
        val:=-1;
        for eigenval in GetEigenVal(W,w) do
-           if CheckOrthoSpace(W,w,eigenval,b)=0 and val=-1 then
+           if CheckOrthoSpace(W,w,eigenval,b)=1 and val=-1 then
                val:=eigenval;
            fi;
        od;
