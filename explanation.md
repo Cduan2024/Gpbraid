@@ -71,4 +71,4 @@ Length of good position braid representatives
        return length;
        end;
    
-    Here if the smallest k
+    Here if the RootVal is 0 then we actually have to add 1 since 0 corresponds to e^{2\pi}.
