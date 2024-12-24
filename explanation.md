@@ -57,7 +57,7 @@ Length of good position braid representatives
        return val;
        end;
 
-5. Finally we define the function to compute the length of good position braid representatives of a given conjugacy class of W.
+5. Finally we define the function to compute the length of good position braid representatives of a given conjugacy class of W. Here the w below must be the element in this class lying in ChevieClassInfo(W).classtext.
 
        GoodLength:=function(W,w)
        local root,length;
@@ -71,4 +71,6 @@ Length of good position braid representatives
        return length;
        end;
    
-    Here if the RootVal is 0 then we actually have to add 1 since 0 corresponds to e^{2\pi}.
+    Here if the RootVal is 0 then we actually have to add 1 since 0 corresponds to e^{2\pi}. 
+
+6.(Extra) You can get the list of lengths for all different conjugacy class as follows.
